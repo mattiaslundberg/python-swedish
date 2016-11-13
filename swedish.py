@@ -1,4 +1,15 @@
+# -*- coding: utf-8 -*-
 import codecs
+
+
+keywords = {
+    "Sant": "True",
+    "Falskt": "False",
+    "om": "if",
+    "for": "för",
+    "while": "medans",
+    "skriv": "print",
+}
 
 
 class SwedishCodec(codecs.Codec):
@@ -8,9 +19,8 @@ class SwedishCodec(codecs.Codec):
     def decode(self, data, errors="strict"):
         data_string = codecs.decode(data, "utf8")
 
-        data_string = data_string.replace("Sant", "True")
-        data_string = data_string.replace("om", "if")
-        data_string = data_string.replace("skriv", "print")
+        for remapped, real in keywords.items():
+            data_string = data_string.replace(remapped, real)
 
         return (data_string, len(data))
 
