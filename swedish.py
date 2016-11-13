@@ -9,6 +9,14 @@ keywords = {
     "for": "för",
     "while": "medans",
     "skriv": "print",
+    "belopp": "abs",
+    "alla": "all",
+    "öppna": "open",
+    "summa": "sum",
+    "flyttal": "float",
+    "störst": "max",
+    "minst": "min",
+    "lista": "list",
 }
 
 
